@@ -160,7 +160,12 @@ void init_refs(vector<Table>& tables) {
 
 string toXML(Table& table) {
 	stringstream result;
-	result << "<table x=\"500\" y=\"200\" name=\""<< table.title << "\">\n";
+
+	static int x = 0;
+	static int y = 0;
+	result << "<table x=\"" << x << "\" y=\"" << y << "\" name=\""<< table.title << "\">\n";
+	x += 50;
+	y += 50;
 
 	for (Field& field : table.fields) {
 		int isNull = (field.info.find("not null") == string::npos);
