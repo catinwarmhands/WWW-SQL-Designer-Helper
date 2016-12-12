@@ -180,10 +180,22 @@ string toXML(Table& table) {
 	return result.str();
 }
 
-int main() {
+
+int main(int argc, char *argv[]) {
 	string filename;
-	cout << "Filename = "; getline(cin, filename);
+
+	if(argc < 2) {
+		cout << "Filename = ";
+		getline(cin, filename);
+	} else {
+		filename = argv[1];
+	}
+
 	ifstream in(filename);
+	if (!in) {
+		cout << "Error reading file\n";
+		return 1;
+	}
 	
 	vector<Table> tables;
 	
