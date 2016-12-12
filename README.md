@@ -1,7 +1,9 @@
-# WWW-SQL-Designer-Helper
+# WWW SQL Designer Helper
 Помощник для создания и просмотра бд на сайте [WWW SQL Designer](http://ondras.zarovi.cz/sql/demo/)
 
 Скачать скомпилированную программу можно [здесь](https://github.com/catinwarmhands/WWW-SQL-Designer-Helper/releases) (Раздел Downloads - helper.exe). Или можете скомпилировать файл `helper.cpp` самостоятельно.
+
+Выше вы можете найти файлы `example1.sql` и `example2.sql` - пример правильно составленных файлов для работы с программой
 
 ##Фичи:
 * Создание XML-файла из вашего sql-кода для создания таблиц, который можно использовать на сайте [WWW SQL Designer](http://ondras.zarovi.cz/sql/demo/) для просмотра базы данных в виде UML-графа. Результат будет записан в файл `output.xml`
